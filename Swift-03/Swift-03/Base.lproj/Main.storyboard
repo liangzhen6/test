@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypaly" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-nd-Kfa">
+                                <rect key="frame" x="16" y="149" width="343" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="QUV-Ue-Di4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-w1-AHN">
+                                <rect key="frame" x="147" y="199" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QcJ-vA-CUs"/>
+                                    <constraint firstAttribute="width" constant="80" id="rE4-8v-D8N"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="go"/>
+                                <connections>
+                                    <action selector="palyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJr-eF-5q6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="1hs-GL-raJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lLO-nd-Kfa" secondAttribute="trailing" constant="16" id="Pe1-SV-G4y"/>
+                            <constraint firstItem="Ib7-w1-AHN" firstAttribute="centerX" secondItem="lLO-nd-Kfa" secondAttribute="centerX" id="fpT-Av-Zy4"/>
+                            <constraint firstItem="Ib7-w1-AHN" firstAttribute="centerY" secondItem="lLO-nd-Kfa" secondAttribute="centerY" id="mVB-ki-Pat"/>
+                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="ojd-pV-FC1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="go" width="128" height="128"/>
+        <image name="mypaly" width="1248" height="528"/>
+    </resources>
+</document>
