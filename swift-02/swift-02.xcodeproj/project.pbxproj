@@ -525,6 +525,7 @@
 				321CE8F91EF018E000868AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		321CE8FA1EF018E000868AD6 /* Build configuration list for PBXNativeTarget "swift-02Tests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +534,7 @@
 				321CE8FC1EF018E000868AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		321CE8FD1EF018E000868AD6 /* Build configuration list for PBXNativeTarget "swift-02UITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +543,7 @@
 				321CE8FF1EF018E000868AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
