@@ -17,6 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mylocationBtn(UIButton())
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -31,9 +32,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         locationManger = CLLocationManager()
         locationManger.delegate = self
-        locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        locationManger.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManger.allowsBackgroundLocationUpdates = true
+        locationManger.distanceFilter = 0.1
         locationManger.requestAlwaysAuthorization()
         locationManger.startUpdatingLocation()
+        locationManger.startMonitoringSignificantLocationChanges()
 
         
     }
@@ -65,20 +69,60 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func displayLocationinfo(_ placemark:CLPlacemark?) {
         if let containsPlacemark = placemark {
-            locationManger.stopUpdatingLocation()
+//            locationManger.stopUpdatingLocation()
 
             let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
             let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
 
+            let name = (containsPlacemark.name != nil) ? containsPlacemark.name : ""
+            
+            let subLocality = (containsPlacemark.subLocality != nil) ? containsPlacemark.subLocality : ""
             self.locationLabel.text = postalCode! + " " + locality!
             
             self.locationLabel.text?.append("\n" + administrativeArea! + ", " + country!)
+//            let arr = placemark?.addressDictionary?["FormattedAddressLines"]
+            
+            let location = "\(locality!)\(subLocality!)\(name!)"
+            let latitude =  containsPlacemark.location?.coordinate.latitude
+            let longitude = containsPlacemark.location?.coordinate.longitude
+            
+            
+            //http://weixinlz.applinzi.com/weixin?type=push&latitude=11.2&longitude=20.8&address=%E6%B7%B1%E5%9C%B3%E5%B8%82
+            let myurl = "http://weixinlz.applinzi.com/weixin?type=push&latitude=\(latitude!)&longitude=\(longitude!)&address=\(location)"
+            
+            self.GET(myurl.addingPercentEncoding(withAllowedCharacters:  NSCharacterSet(charactersIn:"`#%^{}\"[]|\\<> ").inverted)!)//将字符串转化为utf-8
+//            print("\(String(describing: placemark?.location?.coordinate.latitude))-----\(String(describing: placemark?.location?.coordinate.longitude)) ---\(location))")
 
             
         }
 
+    
+    }
+    
+    func GET(_ url:String) {
+        
+        let myUrl = URL.init(string: url)
+//        let request = NSURLRequest.init(url: myUrl!)
+//        var session = URLSession.init(configuration: URLSessionConfiguration.default)
+        let mySession = URLSession.shared.dataTask(with: myUrl!) { (data, respon, error) in
+            if error == nil {
+                print("成功")
+                var array:Any? = nil
+                do {
+                array = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions())
+                print(array!)
+                } catch {
+                
+                }
+            
+            }
+            
+        }
+        
+        mySession.resume()
+        
         
         
         

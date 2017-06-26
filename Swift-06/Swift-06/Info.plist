@@ -25,6 +25,15 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>where are you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow to use location and can send it to me</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -46,9 +55,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>where are you</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow to use location and can send it to me</string>
 </dict>
 </plist>
