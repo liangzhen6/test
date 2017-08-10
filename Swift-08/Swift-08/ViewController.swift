@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (Timer) in
                 if (self.audioPlayer?.isPlaying)! {
                     self.randomColor()
+                }else{
+                    self.timer?.fireDate = Date.distantFuture;
                 }
             })
             timer?.fireDate = Date.distantFuture
