@@ -1,24 +1,23 @@
 //
-//  ViewController.swift
+//  backView.swift
 //  Swift-09
 //
 //  Created by liangzhen on 2017/8/12.
 //  Copyright © 2017年 liangzhen. All rights reserved.
-/*
- 这个可以作为查看图片详情功能，很好。
- */
+//
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class backView: UIView, UIScrollViewDelegate {
 
     var imageView: UIImageView!
     var scrollView: UIScrollView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         imageView = UIImageView.init(image: UIImage.init(named: "Steve"))
-
+        
         setUpScrollView()
         scrollView.delegate = self
         
@@ -26,15 +25,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.zoomScale = scrollView.minimumZoomScale
         
         recenterImage()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        
     }
     
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return UIStatusBarStyle.lightContent
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    
+    
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setZoomScaleFor(scrollView.bounds.size)
         
         if scrollView.zoomScale < scrollView.minimumZoomScale {
@@ -46,15 +49,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     
     fileprivate func setUpScrollView() {
-    
-        scrollView = UIScrollView.init(frame: view.bounds)
+        
+        scrollView = UIScrollView.init(frame: self.bounds)
         //这里是一种约束
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         scrollView.backgroundColor = UIColor.clear
         scrollView.contentSize = imageView.bounds.size
         imageView.backgroundColor = UIColor.red
         scrollView.addSubview(imageView)
-//        view.addSubview(scrollView)
+        self.addSubview(scrollView)
         
     }
     
@@ -77,7 +80,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.contentInset = UIEdgeInsetsMake(verticalSpace, horizontalSpace, verticalSpace, horizontalSpace)
         print(verticalSpace,horizontalSpace,scrollViewSize.width,scrollViewSize.height)
-    
+        
     }
     
     
@@ -89,19 +92,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         self.recenterImage()
     }
+
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let myController = MyViewController() as MyViewController
-        
-        self.present(myController, animated: true, completion: nil)
-        
+    
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    */
 
 }
-

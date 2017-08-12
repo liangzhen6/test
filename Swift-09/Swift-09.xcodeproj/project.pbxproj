@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320D149B1F3F3B4B00920EA8 /* backView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D149A1F3F3B4B00920EA8 /* backView.swift */; };
+		320D149E1F3F3EFE00920EA8 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D149C1F3F3EFE00920EA8 /* MyViewController.swift */; };
 		32F9F8491F3EF7AF00F22E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9F8481F3EF7AF00F22E3B /* AppDelegate.swift */; };
 		32F9F84B1F3EF7AF00F22E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9F84A1F3EF7AF00F22E3B /* ViewController.swift */; };
 		32F9F84E1F3EF7AF00F22E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F9F84C1F3EF7AF00F22E3B /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320D149A1F3F3B4B00920EA8 /* backView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backView.swift; sourceTree = "<group>"; };
+		320D149C1F3F3EFE00920EA8 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		32F9F8451F3EF7AF00F22E3B /* Swift-09.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-09.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F9F8481F3EF7AF00F22E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32F9F84A1F3EF7AF00F22E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				32F9F8481F3EF7AF00F22E3B /* AppDelegate.swift */,
 				32F9F84A1F3EF7AF00F22E3B /* ViewController.swift */,
+				320D149C1F3F3EFE00920EA8 /* MyViewController.swift */,
+				320D149A1F3F3B4B00920EA8 /* backView.swift */,
 				32F9F84C1F3EF7AF00F22E3B /* Main.storyboard */,
 				32F9F84F1F3EF7AF00F22E3B /* Assets.xcassets */,
 				32F9F8511F3EF7AF00F22E3B /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				32F9F84B1F3EF7AF00F22E3B /* ViewController.swift in Sources */,
 				32F9F8491F3EF7AF00F22E3B /* AppDelegate.swift in Sources */,
+				320D149E1F3F3EFE00920EA8 /* MyViewController.swift in Sources */,
+				320D149B1F3F3B4B00920EA8 /* backView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +515,7 @@
 				32F9F86F1F3EF7AF00F22E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32F9F8701F3EF7AF00F22E3B /* Build configuration list for PBXNativeTarget "Swift-09Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				32F9F8721F3EF7AF00F22E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32F9F8731F3EF7AF00F22E3B /* Build configuration list for PBXNativeTarget "Swift-09UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				32F9F8751F3EF7AF00F22E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
