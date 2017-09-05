@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="Swift_10" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginView" customModule="Swift_10" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71s-Uv-rqf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
+                    <color key="backgroundColor" red="0.56824042770000005" green="0.60410604599999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="JcY-1w-tX6">
+                    <rect key="frame" x="78" y="80" width="218" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="0kP-tS-Env"/>
+                        <constraint firstAttribute="width" constant="218" id="oqb-U3-EfI"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlW-tH-ncB">
+                    <rect key="frame" x="20" y="537" width="335" height="45"/>
+                    <color key="backgroundColor" red="0.043533398470702131" green="0.68066966533660889" blue="0.18007087342411396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="mYn-05-uVk"/>
+                    </constraints>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="Pcs-iL-5cg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCF-TK-UVW">
+                    <rect key="frame" x="20" y="602" width="335" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="1Fq-OR-jFT"/>
+                    </constraints>
+                    <state key="normal" title="Sign up">
+                        <color key="titleColor" red="0.043533398469999998" green="0.68066966529999995" blue="0.1800708734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nlW-tH-ncB" secondAttribute="trailing" constant="20" id="50R-1R-rCw"/>
+                <constraint firstItem="JcY-1w-tX6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6zj-v4-YC8"/>
+                <constraint firstItem="71s-Uv-rqf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7xI-dH-jCt"/>
+                <constraint firstItem="JcY-1w-tX6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="BFt-nf-8u6"/>
+                <constraint firstAttribute="trailing" secondItem="TCF-TK-UVW" secondAttribute="trailing" constant="20" id="MfI-cl-J9E"/>
+                <constraint firstItem="nlW-tH-ncB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="MxY-Nk-DSG"/>
+                <constraint firstItem="TCF-TK-UVW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="XiR-UM-qz9"/>
+                <constraint firstItem="TCF-TK-UVW" firstAttribute="top" secondItem="nlW-tH-ncB" secondAttribute="bottom" constant="20" id="ZHu-c1-Be0"/>
+                <constraint firstAttribute="bottom" secondItem="71s-Uv-rqf" secondAttribute="bottom" id="mGL-Lc-7cj"/>
+                <constraint firstAttribute="trailing" secondItem="71s-Uv-rqf" secondAttribute="trailing" id="sJx-Bl-JuC"/>
+                <constraint firstItem="71s-Uv-rqf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u4O-k1-oy0"/>
+                <constraint firstAttribute="bottom" secondItem="TCF-TK-UVW" secondAttribute="bottom" constant="20" id="ztf-QK-f9G"/>
+            </constraints>
+            <connections>
+                <outlet property="movieView" destination="71s-Uv-rqf" id="OXF-Zv-1qX"/>
+            </connections>
+            <point key="canvasLocation" x="150.5" y="-246.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login-secondary-logo" width="218" height="66"/>
+    </resources>
+</document>

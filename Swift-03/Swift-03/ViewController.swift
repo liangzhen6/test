@@ -25,15 +25,15 @@ class ViewController: UIViewController {
     @IBAction func palyAction(_ sender: UIButton) {
         
         let player = AVPlayer.init(url: NSURL.init(fileURLWithPath: path!) as URL)
-        
+        player.addObserver(self, forKeyPath:"status", options: .new, context: nil)
         let playViewController = AVPlayerViewController()
         playViewController.player = player
-        
-        self.present(playViewController, animated: true) { 
+        self.present(playViewController, animated: true) {
             playViewController.player?.play()
         }
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

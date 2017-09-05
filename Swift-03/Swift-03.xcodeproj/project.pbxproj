@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					32E3666D1EF4D16700999F24 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G4E6298X77;
 						ProvisioningStyle = Automatic;
 					};
 					32E366811EF4D16700999F24 = {
@@ -416,7 +417,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = "Swift-03/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lz.Swift-03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +431,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = "Swift-03/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lz.Swift-03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
