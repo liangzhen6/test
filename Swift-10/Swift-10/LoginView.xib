@@ -78,7 +78,7 @@
             <connections>
                 <outlet property="movieView" destination="71s-Uv-rqf" id="OXF-Zv-1qX"/>
             </connections>
-            <point key="canvasLocation" x="150.5" y="-246.5"/>
+            <point key="canvasLocation" x="270" y="-232"/>
         </view>
     </objects>
     <resources>
