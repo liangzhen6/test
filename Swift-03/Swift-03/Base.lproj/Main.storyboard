@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypaly" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-nd-Kfa">
-                                <rect key="frame" x="16" y="149" width="343" height="180"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="QUV-Ue-Di4"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-w1-AHN">
-                                <rect key="frame" x="147" y="199" width="80" height="80"/>
+                                <rect key="frame" x="147" y="134" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="QcJ-vA-CUs"/>
@@ -39,16 +39,28 @@
                                     <action selector="palyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJr-eF-5q6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-aI-fYs">
+                                <rect key="frame" x="164" y="593" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="全屏"/>
+                                <connections>
+                                    <action selector="qpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgB-xa-AZa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="1hs-GL-raJ"/>
-                            <constraint firstAttribute="trailing" secondItem="lLO-nd-Kfa" secondAttribute="trailing" constant="16" id="Pe1-SV-G4y"/>
+                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1hs-GL-raJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lLO-nd-Kfa" secondAttribute="trailing" id="Pe1-SV-G4y"/>
                             <constraint firstItem="Ib7-w1-AHN" firstAttribute="centerX" secondItem="lLO-nd-Kfa" secondAttribute="centerX" id="fpT-Av-Zy4"/>
                             <constraint firstItem="Ib7-w1-AHN" firstAttribute="centerY" secondItem="lLO-nd-Kfa" secondAttribute="centerY" id="mVB-ki-Pat"/>
-                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="ojd-pV-FC1"/>
+                            <constraint firstItem="lLO-nd-Kfa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="ojd-pV-FC1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mypaleyerimage" destination="lLO-nd-Kfa" id="RnV-kK-JcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
