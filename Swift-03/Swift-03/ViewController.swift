@@ -33,9 +33,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func palyAction(_ sender: UIButton) {
+        
         sender.isHidden = true;
         mypaleyerimage.isHidden = true;
-        let player = AVPlayer.init(url: NSURL.init(fileURLWithPath: path!) as URL)
+        //http://olxnvuztq.bkt.clouddn.com/sansheng.mp4
+//        let player = AVPlayer.init(url: NSURL.init(fileURLWithPath: path!) as URL)
+        let player = AVPlayer.init(url: NSURL.init(string: "http://olxnvuztq.bkt.clouddn.com/sansheng.mp4")! as URL)
+
         self.myplayer = player
         let playerLayer = AVPlayerLayer.init(player: player)
         playerLayer.frame = playerBackView.layer.bounds;
